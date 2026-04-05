@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package rt4.example;
+
+option java_package = "rt4.example";
+option java_outer_classname = "AlternatedMutexProto";
+
+service AlternatedMutex {
+    rpc requestAccess(Request) returns (Response);
+    rpc releaseAccess(Request) returns (Response);
+}
+
+message Request {
+    int32 processId = 1;
+}
+
+message Response {
+    string message = 1;
+}

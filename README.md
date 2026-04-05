@@ -2,8 +2,9 @@
 
 ## Overview
 
-This project implements an **Alternated Mutex** algorithm for distributed systems using gRPC and Protocol Buffers. The alternated mutex is a synchronization mechanism that allows multiple processes to access a shared resource in a mutually exclusive manner, with processes taking turns in a round-robin fashion.
+This project implements an Alternated Mutex algorithm for distributed systems using gRPC and Protocol Buffers.
 
+The goal is to ensure mutual exclusion when multiple processes access a shared resource. The algorithm follows a round-robin strategy, allowing processes to enter the critical section one at a time in a fair and ordered manner, thus preventing conflicts and starvation.
 
 ## Demo
 
